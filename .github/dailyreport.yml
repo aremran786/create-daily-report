@@ -1,18 +1,14 @@
 name: Scheduled Task
-
-on:
+'on':
   schedule:
-    - cron: '0 * * * *' # Set your desired cron schedule here (e.g., every minute)
-
+    - cron: 1 * * * *
 jobs:
   run:
     name: Run Scheduled Task
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
-
       - name: Run Your Task
         run: |
           # Add your command or script to run here
